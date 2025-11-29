@@ -40,3 +40,21 @@ This system captures packets from a live network interface, analyzes TCP/IP head
 sudo apt update
 sudo apt install libpcap-dev
 sudo apt install mosquitto mosquitto-clients libmosquitto-dev
+```
+
+### 2️⃣ Clone Repository
+```bash
+git clone https://github.com/yourusername/network-intrusion-detection-system.git
+cd network-intrusion-detection-system
+```
+
+### 3️⃣ Build the Program
+```bash
+make
+```
+
+### 4️⃣ Run the IDS
+```bash
+sudo ./myids
+```
+
