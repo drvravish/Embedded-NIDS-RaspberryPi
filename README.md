@@ -118,7 +118,7 @@ mosquitto_publish(mosq, NULL, MQTT_TOPIC, strlen(alert_msg), alert_msg, 1, false
 ```
 
 ## ⚠️ Security Notes
-- **Do NOT upload .pem keys publicly**
+- **Do NOT upload `.pem ` keys publicly**
 - **Logs may contain sensitive info**
 - **Must run with root privileges**  
 
