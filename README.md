@@ -1,39 +1,34 @@
-# Embedded-NIDS-RaspberryPi
-Real-time Network Intrusion Detection System (NIDS) for embedded ARM platforms using libpcap and MQTT
+# 📡 Network Intrusion Detection System (NIDS)
 
+A lightweight, real-time **Network Intrusion Detection System** built in C using **libpcap** and **MQTT**, capable of detecting:
 
-# Smart Embedded Network Intrusion Detection System (NIDS)
+- 🚨 **DoS (Denial of Service) attacks**
+- 🌐 **DDoS attacks based on distributed packet sources**
+- 🔎 **Port Scanning attempts**
+- 🔐 **Weak TLS Cipher Suite detection (0x002f, 0x0035)**
+- 📥 Real-time alerts published through **MQTT broker**
 
-Platform: Raspberry Pi 3B (ARM Cortex-A53) / Debian (WSL)
-Language: C (Low-level networking)
-Libraries: libpcap, libmosquitto, pthread
+This system captures packets from a live network interface, analyzes TCP/IP headers in real time, and logs & publishes alerts to subscribed monitoring systems.
 
-Project Overview
+---
 
-This project implements a lightweight, real-time Network Intrusion Detection System designed for resource-constrained embedded devices. Unlike heavy enterprise solutions (Snort/Suricata), this custom engine operates at the packet level to detect specific attack signatures with minimal CPU overhead.
+## ✨ Features
+| Feature | Description |
+|---------|------------|
+| Packet Sniffing | Uses `libpcap` to capture live packets |
+| DoS detection | Detects sources sending excessive packets |
+| DDoS detection | Detects multiple sources attacking same destination |
+| Port scan detection | Detects SYN-based port scanning |
+| TLS vulnerability scan | Detects weak cipher-suite use in ClientHello |
+| MQTT Integration | Publishes alerts to MQTT topic `myids/alerts` |
+| Logging | Logs events to `ids.log` |
 
-Key Features
+---
 
-Packet Sniffing: Uses raw sockets via libpcap to capture TCP/IP traffic in real-time.
-
-Attack Detection Modules:
-
-DoS/DDoS: Tracks SYN packet rates per source IP using stateful counters.
-
-Port Scanning: Identifies rapid connection attempts across multiple ports.
-
-Weak Encryption: Parses TLS Handshake headers to detect deprecated cipher suites (e.g., SHA-1).
-
-Real-Time Alerting: Publishes threat data to an admin dashboard via MQTT protocol.
-
-Technical Implementation
-
-Memory Management: Optimized for limited RAM (1GB) using efficient data structures.
-
-Concurrency: Multi-threaded packet processing to prevent packet loss during high traffic.
-
-Cross-Platform: Developed on WSL (Debian) and deployed on Raspberry Pi OS.
-
-
-
-Build & Run
+## 🧰 Technologies Used
+- **C (GCC)**
+- **libpcap**
+- **Mosquitto / Eclipse Paho MQTT**
+- **Linux / Debian /**
+  
+---
