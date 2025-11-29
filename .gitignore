@@ -1,0 +1,44 @@
+# =============================
+# Build & Compiled Binaries
+# =============================
+build/
+*.o
+*.out
+*.exe
+*.a
+*.so
+myids
+port_scan_detector
+test_tls
+
+# =============================
+# Logs & Runtime Output Files
+# =============================
+*.log
+logs/
+ids.log
+port_scan.log
+
+# =============================
+# Security / Keys / Certificates
+# NEVER commit these to public repos
+# =============================
+*.pem
+*.crt
+*.key
+certificates/
+
+# =============================
+# Editor / OS / Tool Artifacts
+# =============================
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*.tmp
+
+# macOS System
+.DS_Store
+
+# Windows System
+Thumbs.db
