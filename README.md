@@ -2,7 +2,7 @@
 Real-time Network Intrusion Detection System (NIDS) for embedded ARM platforms using libpcap and MQTT
 
 
-Smart Embedded Network Intrusion Detection System (NIDS)
+# Smart Embedded Network Intrusion Detection System (NIDS)
 
 Platform: Raspberry Pi 3B (ARM Cortex-A53) / Debian (WSL)
 Language: C (Low-level networking)
