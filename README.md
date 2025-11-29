@@ -117,7 +117,24 @@ void log_event(const char *message);
 mosquitto_publish(mosq, NULL, MQTT_TOPIC, strlen(alert_msg), alert_msg, 1, false);
 ```
 
+## ⚠️ Security Notes
+- **Do NOT upload .pem keys publicly**
+- **Logs may contain sensitive info**
+- **Must run with root privileges**  
+---
 
 
+## 📄 License
+Distributed under MIT License
+---
+
+## 🤝 Contributing
+Contributions welcome!
+Open an issue or submit PR. 
+---
+
+## ⭐ Support
+If you like this project, consider giving it a Star ⭐ on GitHub! 
+---
 
 
