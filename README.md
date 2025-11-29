@@ -122,19 +122,20 @@ mosquitto_publish(mosq, NULL, MQTT_TOPIC, strlen(alert_msg), alert_msg, 1, false
 - **Logs may contain sensitive info**
 - **Must run with root privileges**  
 
-
-
-## 📄 License
-Distributed under MIT License
 ---
 
-## 🤝 Contributing
+
+# 🤝 Contributing
+
 Contributions welcome!
-Open an issue or submit PR. 
+Open an issue or submit PR
+
 ---
 
-## ⭐ Support
-If you like this project, consider giving it a Star ⭐ on GitHub! 
+# ⭐ Support
+
+If you like this project, consider giving it a **Star** ⭐ on **GitHub!**
+
 ---
 
 
