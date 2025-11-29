@@ -64,19 +64,58 @@ interface=eth0
 mqtt_host=localhost
 ```
 
+## 📤 MQTT Alerts Example Messages
+```txt
+ALERT: Potential DoS from 185.125.190.83 (20 packets in 5 seconds)
+ALERT: Port Scan detected! 127.0.0.1 is scanning 127.0.0.1. 15 unique ports in 10 seconds.
+ALERT: Weak TLS Cipher Suite detected (ID: 0x002f)
+```
 
+Subscribe to MQTT topic:
+```bash
+mosquitto_sub -t "myids/alerts"
+```
 
+### 🧪 Test TLS Detector Example
+```bash
+sudo ./test_tls
+```
 
+### 🧱 Key Functions Overview
+#### Packet Capture
+```c
+pcap_loop(pcap_handle, -1, packet_handler, NULL);
+```
 
+#### Packet Handler
+```c
+void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
+```
 
+#### DoS Detection
+```c
+void process_dos(const char *src_ip);
+```
 
+#### Port Scan Detection
+```c
+void process_port_scan(const char *src_ip, const char *dst_ip, uint16_t dst_port, const struct tcphdr *tcp);
+```
 
+#### TLS Weak Cipher Detection
+```c
+void process_tls_handshake(const u_char *payload, int len);
+```
 
+#### Logging
+```c
+void log_event(const char *message);
+```
 
-
-
-
-
+#### MQTT Publish
+```c
+mosquitto_publish(mosq, NULL, MQTT_TOPIC, strlen(alert_msg), alert_msg, 1, false);
+```
 
 
 
