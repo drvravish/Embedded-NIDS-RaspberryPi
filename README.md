@@ -58,3 +58,27 @@ make
 sudo ./myids
 ```
 
+## 🔧 Configuration
+```txt
+interface=eth0
+mqtt_host=localhost
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
