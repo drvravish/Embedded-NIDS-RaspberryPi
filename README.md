@@ -29,6 +29,14 @@ This system captures packets from a live network interface, analyzes TCP/IP head
 - **C (GCC)**
 - **libpcap**
 - **Mosquitto / Eclipse Paho MQTT**
-- **Linux / Debian /**
+- **Linux / Debian**
   
 ---
+
+## 🛠 Installation
+
+### 1️⃣ Install Dependencies
+```bash
+sudo apt update
+sudo apt install libpcap-dev
+sudo apt install mosquitto mosquitto-clients libmosquitto-dev
