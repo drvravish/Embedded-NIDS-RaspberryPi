@@ -1,0 +1,3 @@
+threshold=5  # Lower for testing
+interface=eth0
+mqtt_host=localhost
